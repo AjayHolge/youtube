@@ -20,9 +20,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
   Future<void> _method() async {
     ScaffoldMessenger.of(
       context,
-    ).showSnackBar(
-      const SnackBar(content: Text("rest like send ✅✅✅")),
-    );
+    ).showSnackBar(const SnackBar(content: Text("rest like send ✅✅✅")));
     await Future.delayed(const Duration(seconds: 1));
   }
 
@@ -52,7 +50,11 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Icon(Icons.lock_outline, color: AppColor.primarycolor, size: 64),
+            const Icon(
+              Icons.lock_outline,
+              color: AppColor.primarycolor,
+              size: 64,
+            ),
             const SizedBox(height: 24),
             const Text(
               'Reset your password',
