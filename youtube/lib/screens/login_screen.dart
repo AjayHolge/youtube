@@ -1,12 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:http/http.dart';
 import 'package:youtube/color/app_color.dart';
 import 'package:youtube/controller/login_controller.dart';
 import 'package:youtube/routes/app_routes.dart';
-
-
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -15,20 +11,17 @@ class LoginScreen extends StatefulWidget {
   State<LoginScreen> createState() => _LoginScreenState();
 }
 
-
 class _LoginScreenState extends State<LoginScreen> {
   bool magic = true;
   final _formKey = GlobalKey<FormState>();
 
+  final loginController = Get.put(LoginController());
 
-final loginController = Get.put(LoginController());
-
-void _login() {
-  if (_formKey.currentState!.validate()) {
-    loginController.loginUser();
+  void _login() {
+    if (_formKey.currentState!.validate()) {
+      loginController.loginUser();
+    }
   }
-}
-
 
   @override
   Widget build(BuildContext context) {
@@ -67,7 +60,7 @@ void _login() {
                           Colors.blue, // 👈 change this to your desired color
                       fontSize: 16,
                     ),
-                    controller:loginController.emailCtrl,
+                    controller: loginController.emailCtrl,
                     decoration: InputDecoration(
                       labelText: "Email or phone",
                       border: OutlineInputBorder(
@@ -129,7 +122,7 @@ void _login() {
                         onTap: () {
                           Navigator.pushNamed(
                             (context),
-                            AppRoutes.forgotpassword
+                            AppRoutes.forgotpassword,
                           );
                         },
                         child: const Text(
@@ -169,7 +162,7 @@ void _login() {
                           onTap: () {
                             Navigator.pushReplacementNamed(
                               context,
-                              AppRoutes.creatNewAccountScreen
+                              AppRoutes.creatNewAccountScreen,
                               // MaterialPageRoute(
                               //   builder: (context) => CreateNewAccountScreen(),
                               // ),

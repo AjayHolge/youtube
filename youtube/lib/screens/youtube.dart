@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:youtube/routes/app_routes.dart';
-import 'package:youtube/screens/login_screen.dart';
-import 'package:youtube/screens/notifications.dart';
-import 'package:youtube/screens/shorts.dart';
-import 'package:youtube/screens/youtube_play_video.dart';
 
 class Youtube extends StatefulWidget {
   const Youtube({super.key});
@@ -53,7 +49,6 @@ class _YoutubeState extends State<Youtube> {
             children: [
               GestureDetector(
                 onTap: () {
-                 
                   Navigator.pushNamed(context, AppRoutes.notifications);
                 },
 
@@ -71,11 +66,7 @@ class _YoutubeState extends State<Youtube> {
             SizedBox(height: 15),
             GestureDetector(
               onTap: () {
-                Navigator.pushNamed(
-                  context,
-                  AppRoutes.youtubePlayVideo
-
-                );
+                Navigator.pushNamed(context, AppRoutes.youtubePlayVideo);
               },
               child: Container(
                 decoration: BoxDecoration(color: Colors.grey.shade300),
@@ -94,7 +85,7 @@ class _YoutubeState extends State<Youtube> {
                 SizedBox(width: 20),
                 Container(
                   height: height * 0.06,
-                  width: Width*0.15,
+                  width: Width * 0.15,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     image: DecorationImage(
@@ -129,7 +120,7 @@ class _YoutubeState extends State<Youtube> {
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                Container(
+                SizedBox(
                   height: 70,
                   //width: 80,
                   child: Image.network(

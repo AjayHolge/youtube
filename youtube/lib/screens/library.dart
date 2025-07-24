@@ -4,7 +4,7 @@ import 'package:get/get_core/src/get_main.dart';
 import 'package:youtube/controller/user_controller.dart';
 
 class Library extends StatefulWidget {
-  Library({super.key});
+  const Library({super.key});
 
   @override
   State<Library> createState() => _LibraryState();
@@ -63,7 +63,7 @@ class _LibraryState extends State<Library> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                user?.name  ?? "________",
+                                user?.name ?? "Ajay Holge",
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 22,
@@ -75,7 +75,7 @@ class _LibraryState extends State<Library> {
                                 text: TextSpan(
                                   children: [
                                     TextSpan(
-                                      text: "${user?.channelName ??  ""}• ",
+                                      text: "${user?.channelName ?? ""}• ",
                                       style: TextStyle(
                                         color: Colors.white,
                                         fontSize: 15,
@@ -108,10 +108,10 @@ class _LibraryState extends State<Library> {
                         children: [
                           ElevatedButton.icon(
                             style: ButtonStyle(
-                              backgroundColor: MaterialStateProperty.all(
+                              backgroundColor: WidgetStateProperty.all(
                                 const Color.fromARGB(255, 111, 111, 111),
                               ),
-                              shape: MaterialStateProperty.all(
+                              shape: WidgetStateProperty.all(
                                 RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(20),
                                 ),
@@ -131,10 +131,10 @@ class _LibraryState extends State<Library> {
                           SizedBox(width: 12),
                           ElevatedButton.icon(
                             style: ButtonStyle(
-                              backgroundColor: MaterialStateProperty.all(
+                              backgroundColor: WidgetStateProperty.all(
                                 const Color.fromARGB(255, 111, 111, 111),
                               ),
-                              shape: MaterialStateProperty.all(
+                              shape: WidgetStateProperty.all(
                                 RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(20),
                                 ),
@@ -156,10 +156,10 @@ class _LibraryState extends State<Library> {
                           SizedBox(width: 12),
                           ElevatedButton.icon(
                             style: ButtonStyle(
-                              backgroundColor: MaterialStateProperty.all(
+                              backgroundColor: WidgetStateProperty.all(
                                 const Color.fromARGB(255, 111, 111, 111),
                               ),
-                              shape: MaterialStateProperty.all(
+                              shape: WidgetStateProperty.all(
                                 RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(20),
                                 ),
@@ -199,10 +199,10 @@ class _LibraryState extends State<Library> {
                         ),
                         OutlinedButton(
                           style: ButtonStyle(
-                            side: MaterialStateProperty.all(
+                            side: WidgetStateProperty.all(
                               BorderSide(color: Colors.grey),
                             ),
-                            shape: MaterialStateProperty.all(
+                            shape: WidgetStateProperty.all(
                               RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(20),
                               ),
@@ -221,7 +221,7 @@ class _LibraryState extends State<Library> {
                   SizedBox(height: 16),
 
                   // History Videos
-                  Container(
+                  SizedBox(
                     height: 200,
                     child: ListView(
                       scrollDirection: Axis.horizontal,
@@ -466,10 +466,10 @@ class _LibraryState extends State<Library> {
                             SizedBox(width: 16),
                             OutlinedButton(
                               style: ButtonStyle(
-                                side: MaterialStateProperty.all(
+                                side: WidgetStateProperty.all(
                                   BorderSide(color: Colors.grey),
                                 ),
-                                shape: MaterialStateProperty.all(
+                                shape: WidgetStateProperty.all(
                                   RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(20),
                                   ),
@@ -493,7 +493,7 @@ class _LibraryState extends State<Library> {
                   SizedBox(height: 16),
 
                   // Playlists
-                  Container(
+                  SizedBox(
                     height: 200,
                     child: ListView(
                       scrollDirection: Axis.horizontal,

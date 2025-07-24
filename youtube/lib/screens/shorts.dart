@@ -83,7 +83,7 @@ class Shorts extends StatelessWidget {
                           SizedBox(width: 10),
                           ElevatedButton(
                             style: ButtonStyle(
-                              backgroundColor: MaterialStateProperty.all(
+                              backgroundColor: WidgetStateProperty.all(
                                 Colors.white,
                               ),
                             ),

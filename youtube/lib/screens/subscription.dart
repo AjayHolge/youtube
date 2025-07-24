@@ -14,7 +14,7 @@ class _SubscriptionState extends State<Subscription> {
       backgroundColor: Colors.black,
 
       appBar: AppBar(
-        leading: Container(
+        leading: SizedBox(
           height: 70,
           width: 70,
           child: Image.network(
@@ -76,106 +76,121 @@ class _SubscriptionState extends State<Subscription> {
                 child: Padding(
                   padding: const EdgeInsets.symmetric(vertical: 10.0),
                   child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    ElevatedButton(
-                    onPressed: () {},
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.white12,
-                      foregroundColor: Colors.white,
-                      shape: StadiumBorder(),
-                    ),
-                    child: Text("All"),
-                    ),
-                    SizedBox(width: 7,),
-                    ElevatedButton(
-                    onPressed: () {},
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.white12,
-                      foregroundColor: Colors.white,
-                      shape: StadiumBorder(),
-                    ),
-                    child: Text("Today"),
-                    ),
-                     SizedBox(width: 7,),
-                    ElevatedButton(
-                    onPressed: () {},
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.white12,
-                      foregroundColor: Colors.white,
-                      shape: StadiumBorder(),
-                    ),
-                    child: Text("Continue Watching"),
-                    ),
-                     SizedBox(width: 7,),
-                    ElevatedButton(
-                    onPressed: () {},
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.white12,
-                      foregroundColor: Colors.white,
-                      shape: StadiumBorder(),
-                    ),
-                    child: Text("Unwatched"),
-                    ),
-                     SizedBox(width: 7,),
-                    ElevatedButton(
-                    onPressed: () {},
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.white12,
-                      foregroundColor: Colors.white,
-                      shape: StadiumBorder(),
-                    ),
-                    child: Text("Live"),
-                    ),
-                     SizedBox(width: 7,),
-                    ElevatedButton(
-                    onPressed: () {},
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.white12,
-                      foregroundColor: Colors.white,
-                      shape: StadiumBorder(),
-                    ),
-                    
-                    child: Text("Posts"),
-                    ),
-                     SizedBox(width: 7,),
-                    ElevatedButton(
-                    onPressed: () {},
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.white12,
-                      foregroundColor: Colors.white,
-                      shape: StadiumBorder(),
-                    ),
-                    child: Text("Settings"),
-                    ),
-                     SizedBox(width: 7,),
-                  ],
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      ElevatedButton(
+                        onPressed: () {},
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.white12,
+                          foregroundColor: Colors.white,
+                          shape: StadiumBorder(),
+                        ),
+                        child: Text("All"),
+                      ),
+                      SizedBox(width: 7),
+                      ElevatedButton(
+                        onPressed: () {},
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.white12,
+                          foregroundColor: Colors.white,
+                          shape: StadiumBorder(),
+                        ),
+                        child: Text("Today"),
+                      ),
+                      SizedBox(width: 7),
+                      ElevatedButton(
+                        onPressed: () {},
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.white12,
+                          foregroundColor: Colors.white,
+                          shape: StadiumBorder(),
+                        ),
+                        child: Text("Continue Watching"),
+                      ),
+                      SizedBox(width: 7),
+                      ElevatedButton(
+                        onPressed: () {},
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.white12,
+                          foregroundColor: Colors.white,
+                          shape: StadiumBorder(),
+                        ),
+                        child: Text("Unwatched"),
+                      ),
+                      SizedBox(width: 7),
+                      ElevatedButton(
+                        onPressed: () {},
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.white12,
+                          foregroundColor: Colors.white,
+                          shape: StadiumBorder(),
+                        ),
+                        child: Text("Live"),
+                      ),
+                      SizedBox(width: 7),
+                      ElevatedButton(
+                        onPressed: () {},
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.white12,
+                          foregroundColor: Colors.white,
+                          shape: StadiumBorder(),
+                        ),
+
+                        child: Text("Posts"),
+                      ),
+                      SizedBox(width: 7),
+                      ElevatedButton(
+                        onPressed: () {},
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.white12,
+                          foregroundColor: Colors.white,
+                          shape: StadiumBorder(),
+                        ),
+                        child: Text("Settings"),
+                      ),
+                      SizedBox(width: 7),
+                    ],
                   ),
                 ),
               ),
-        
-        
-               Container(
-                decoration: BoxDecoration(color: Colors.grey.shade300  ,image: DecorationImage(image: NetworkImage("https://d1csarkz8obe9u.cloudfront.net/posterpreviews/coffee-and-study-youtube-thumbnail-design-template-bc4975e87cb0c04c2af5f9abed675f2e_screen.jpg?ts=1589615831"),fit: BoxFit.cover)),
+
+              Container(
+                decoration: BoxDecoration(
+                  color: Colors.grey.shade300,
+                  image: DecorationImage(
+                    image: NetworkImage(
+                      "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/coffee-and-study-youtube-thumbnail-design-template-bc4975e87cb0c04c2af5f9abed675f2e_screen.jpg?ts=1589615831",
+                    ),
+                    fit: BoxFit.cover,
+                  ),
+                ),
                 height: 250,
                 width: double.infinity,
-               
+
                 child: Padding(
-                  padding: const EdgeInsets.only(top: 220 ,left: 320 ,right: 10,bottom: 10),
+                  padding: const EdgeInsets.only(
+                    top: 220,
+                    left: 320,
+                    right: 10,
+                    bottom: 10,
+                  ),
                   child: Container(
-                    height: 30,width: 60,
-                    decoration: BoxDecoration(borderRadius: BorderRadius.circular(10),color: const Color.fromARGB(255, 255, 17, 0),),
+                    height: 30,
+                    width: 60,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: const Color.fromARGB(255, 255, 17, 0),
+                    ),
                     child: Row(
                       children: [
-                        Icon(Icons.cast ,color: Colors.white, size: 10),
-                        Text("Live" ,style: TextStyle(color: Colors.white),),
+                        Icon(Icons.cast, color: Colors.white, size: 10),
+                        Text("Live", style: TextStyle(color: Colors.white)),
                       ],
-                    )),
+                    ),
+                  ),
                 ),
-               
-                
               ),
-                SizedBox(height: 20),
+              SizedBox(height: 20),
               Row(
                 children: [
                   SizedBox(width: 20),
@@ -213,11 +228,11 @@ class _SubscriptionState extends State<Subscription> {
                   ),
                 ],
               ),
-        
+
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Container(
+                  SizedBox(
                     height: 70,
                     //width: 80,
                     child: Image.network(
@@ -236,7 +251,7 @@ class _SubscriptionState extends State<Subscription> {
                   Icon(Icons.more_vert, color: Colors.white),
                 ],
               ),
-        
+
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
@@ -285,7 +300,6 @@ class _SubscriptionState extends State<Subscription> {
                   ],
                 ),
               ),
-             
             ],
           ),
         ),
