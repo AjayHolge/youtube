@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:youtube/routes/app_routes.dart';
+import 'package:youtube/screens/login_screen.dart';
+import 'package:youtube/screens/notifications.dart';
+import 'package:youtube/screens/shorts.dart';
+import 'package:youtube/screens/youtube_play_video.dart';
 
 class Youtube extends StatefulWidget {
   const Youtube({super.key});
@@ -34,7 +38,7 @@ class _YoutubeState extends State<Youtube> {
     final height = size.height;
     final Width = size.width;
     return Scaffold(
-      backgroundColor: const Color.fromARGB(221, 52, 50, 50),
+      backgroundColor: const Color.fromARGB(221, 0, 0, 0),
       appBar: AppBar(
         leading: Image.network(
           "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/2560px-YouTube_full-color_icon_%282017%29.svg.png",
@@ -60,6 +64,189 @@ class _YoutubeState extends State<Youtube> {
           ),
         ],
       ),
+      // body: SingleChildScrollView(
+      //   child: Column(
+      //     children: [
+      //       SizedBox(height: 15),
+      //       GestureDetector(
+      //         onTap: () {
+      //           Navigator.pushNamed(
+      //             context,
+      //             AppRoutes.youtubePlayVideo
+
+      //           );
+      //         },
+      //         child: Container(
+      //           decoration: BoxDecoration(color: Colors.grey.shade300),
+      //           height: height * 0.3,
+      //           width: double.infinity,
+
+      //           child: Image.network(
+      //             "https://images5.alphacoders.com/468/468447.jpg",
+      //             fit: BoxFit.cover,
+      //           ),
+      //         ),
+      //       ),
+      //       SizedBox(height: 20),
+      //       Row(
+      //         children: [
+      //           SizedBox(width: 20),
+      //           Container(
+      //             height: height * 0.06,
+      //             width: Width*0.15,
+      //             decoration: BoxDecoration(
+      //               shape: BoxShape.circle,
+      //               image: DecorationImage(
+      //                 image: NetworkImage(
+      //                   "https://static.vecteezy.com/system/resources/thumbnails/022/024/539/small_2x/tom-and-jerry-cartoon-free-vector.jpg",
+      //                 ),
+      //               ),
+      //             ),
+      //           ),
+      //           SizedBox(width: 20),
+      //           Column(
+      //             //mainAxisAlignment: MainAxisAlignment.start,
+      //             crossAxisAlignment: CrossAxisAlignment.start,
+      //             children: [
+      //               Text(
+      //                 "Tom and Jerry",
+      //                 style: TextStyle(
+      //                   color: Colors.white,
+      //                   fontSize: 20,
+      //                   fontWeight: FontWeight.w400,
+      //                 ),
+      //               ),
+      //               Text(
+      //                 "tom and jerry play cartoon #child",
+      //                 style: TextStyle(color: Colors.white),
+      //               ),
+      //             ],
+      //           ),
+      //         ],
+      //       ),
+
+      //       Row(
+      //         mainAxisAlignment: MainAxisAlignment.start,
+      //         children: [
+      //           Container(
+      //             height: 70,
+      //             //width: 80,
+      //             child: Image.network(
+      //               "https://img.pikbest.com/origin/09/21/29/70epIkbEsTFJf.png!sw800",
+      //             ),
+      //           ),
+      //           Text(
+      //             "Shorts ",
+      //             style: TextStyle(
+      //               color: Colors.white,
+      //               fontSize: 25,
+      //               fontWeight: FontWeight.w900,
+      //             ),
+      //           ),
+      //           Padding(padding: const EdgeInsets.only(left: 180)),
+      //           Icon(Icons.more_vert, color: Colors.white),
+      //         ],
+      //       ),
+      //       SingleChildScrollView(
+      //         scrollDirection: Axis.horizontal,
+      //         child: Row(
+      //           children: [
+      //             Container(
+      //               height: 300,
+      //               width: 185,
+      //               decoration: BoxDecoration(
+      //                 image: DecorationImage(
+      //                   image: NetworkImage(
+      //                     "https://w0.peakpx.com/wallpaper/660/259/HD-wallpaper-tom-and-jerry-cartoons-thumbnail.jpg",
+      //                   ),
+      //                   fit: BoxFit.fill,
+      //                 ),
+      //                 borderRadius: BorderRadius.circular(15),
+      //               ),
+      //             ),
+      //             SizedBox(width: 10),
+      //             Container(
+      //               height: 300,
+      //               width: 185,
+      //               decoration: BoxDecoration(
+      //                 image: DecorationImage(
+      //                   image: NetworkImage(
+      //                     "https://i.pinimg.com/474x/9f/a1/ba/9fa1ba3e7dd1298712e3958ac8c3a671.jpg",
+      //                   ),
+      //                   fit: BoxFit.fill,
+      //                 ),
+      //                 borderRadius: BorderRadius.circular(15),
+      //               ),
+      //             ),
+      //             SizedBox(width: 10),
+      //             Container(
+      //               height: 300,
+      //               width: 185,
+      //               decoration: BoxDecoration(
+      //                 image: DecorationImage(
+      //                   image: NetworkImage(
+      //                     "https://images.justwatch.com/poster/323283688/s718/ninja-hattori.jpg",
+      //                   ),
+      //                   fit: BoxFit.fill,
+      //                 ),
+      //                 borderRadius: BorderRadius.circular(15),
+      //               ),
+      //             ),
+      //           ],
+      //         ),
+      //       ),
+      //       SizedBox(height: 15),
+      //       Container(
+      //         decoration: BoxDecoration(color: Colors.grey.shade300),
+      //         height: 250,
+      //         width: double.infinity,
+
+      //         child: Image.network(
+      //           "https://i.pinimg.com/736x/14/27/58/1427586be74ac26b3a4979a7fd1ab52a.jpg",
+      //           fit: BoxFit.cover,
+      //         ),
+      //       ),
+      //       SizedBox(height: 20),
+      //       Row(
+      //         children: [
+      //           SizedBox(width: 20),
+      //           Container(
+      //             height: 50,
+      //             width: 50,
+      //             decoration: BoxDecoration(
+      //               shape: BoxShape.circle,
+      //               image: DecorationImage(
+      //                 image: NetworkImage(
+      //                   "https://cdn.dribbble.com/userupload/29466076/file/original-ba33901121ed678c59f90d9a6fca0438.gif",
+      //                 ),
+      //                 fit: BoxFit.cover,
+      //               ),
+      //             ),
+      //           ),
+      //           SizedBox(width: 20),
+      //           Column(
+      //             //mainAxisAlignment: MainAxisAlignment.start,
+      //             crossAxisAlignment: CrossAxisAlignment.start,
+      //             children: [
+      //               Text(
+      //                 "Doraemon and its Friends",
+      //                 style: TextStyle(
+      //                   color: Colors.white,
+      //                   fontSize: 20,
+      //                   fontWeight: FontWeight.w400,
+      //                 ),
+      //               ),
+      //               Text(
+      //                 "Doraemon his storys",
+      //                 style: TextStyle(color: Colors.white),
+      //               ),
+      //             ],
+      //           ),
+      //         ],
+      //       ),
+      //     ],
+      //   ),
+      // ),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -74,7 +261,7 @@ class _YoutubeState extends State<Youtube> {
                 width: double.infinity,
 
                 child: Image.network(
-                  "https://images5.alphacoders.com/468/468447.jpg",
+                  "https://jiotvimages.cdn.jio.com/dare_images/shows/700/-/2025-02-16/250216874078.jpg",
                   fit: BoxFit.cover,
                 ),
               ),
@@ -84,13 +271,13 @@ class _YoutubeState extends State<Youtube> {
               children: [
                 SizedBox(width: 20),
                 Container(
-                  height: height * 0.06,
-                  width: Width * 0.15,
+                  height: 50,
+                  width: 50,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     image: DecorationImage(
                       image: NetworkImage(
-                        "https://static.vecteezy.com/system/resources/thumbnails/022/024/539/small_2x/tom-and-jerry-cartoon-free-vector.jpg",
+                        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJjjuyvG4ga1xzD8gxvjit63P1DRi4Ya7txw&s",
                       ),
                     ),
                   ),
@@ -101,7 +288,7 @@ class _YoutubeState extends State<Youtube> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      "Tom and Jerry",
+                      "Oggy and Cockroaches",
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 20,
@@ -109,7 +296,7 @@ class _YoutubeState extends State<Youtube> {
                       ),
                     ),
                     Text(
-                      "tom and jerry play cartoon #child",
+                      "oggy and cockroaches play cartoon ",
                       style: TextStyle(color: Colors.white),
                     ),
                   ],
@@ -135,7 +322,7 @@ class _YoutubeState extends State<Youtube> {
                     fontWeight: FontWeight.w900,
                   ),
                 ),
-                Padding(padding: const EdgeInsets.only(left: 180)),
+                Padding(padding: const EdgeInsets.only(left: 210)),
                 Icon(Icons.more_vert, color: Colors.white),
               ],
             ),
@@ -149,7 +336,7 @@ class _YoutubeState extends State<Youtube> {
                     decoration: BoxDecoration(
                       image: DecorationImage(
                         image: NetworkImage(
-                          "https://w0.peakpx.com/wallpaper/660/259/HD-wallpaper-tom-and-jerry-cartoons-thumbnail.jpg",
+                          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX6Gk9YgomvxAm1kTEGzLy_ZDZ-prMl0F34Q&s.jpg",
                         ),
                         fit: BoxFit.fill,
                       ),
@@ -163,7 +350,7 @@ class _YoutubeState extends State<Youtube> {
                     decoration: BoxDecoration(
                       image: DecorationImage(
                         image: NetworkImage(
-                          "https://i.pinimg.com/474x/9f/a1/ba/9fa1ba3e7dd1298712e3958ac8c3a671.jpg",
+                          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiwamD04iUG--0R8gTC8tcCfCXHlCHbtbNVQ&s4",
                         ),
                         fit: BoxFit.fill,
                       ),
@@ -187,6 +374,7 @@ class _YoutubeState extends State<Youtube> {
                 ],
               ),
             ),
+
             SizedBox(height: 15),
             Container(
               decoration: BoxDecoration(color: Colors.grey.shade300),
@@ -194,7 +382,7 @@ class _YoutubeState extends State<Youtube> {
               width: double.infinity,
 
               child: Image.network(
-                "https://i.pinimg.com/736x/14/27/58/1427586be74ac26b3a4979a7fd1ab52a.jpg",
+                "https://images.ctfassets.net/vfkpgemp7ek3/6mpj1xOnV29eumpMOykK4t/36d7ab0f564fb2a7ead20d828d00103b/pokemon-go-six-billion-revenue.jpg",
                 fit: BoxFit.cover,
               ),
             ),
@@ -209,7 +397,7 @@ class _YoutubeState extends State<Youtube> {
                     shape: BoxShape.circle,
                     image: DecorationImage(
                       image: NetworkImage(
-                        "https://cdn.dribbble.com/userupload/29466076/file/original-ba33901121ed678c59f90d9a6fca0438.gif",
+                        "https://64.media.tumblr.com/7cbb9d77dd505369aa8c9ce4ab99caeb/583a42246b71ce73-1b/s1280x1920/62ed1d7b10a9e9913c252778c7e6e9dc483b7c87.gif",
                       ),
                       fit: BoxFit.cover,
                     ),
@@ -221,7 +409,7 @@ class _YoutubeState extends State<Youtube> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      "Doraemon and its Friends",
+                      "Pokemon Adventure",
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 20,
@@ -229,7 +417,7 @@ class _YoutubeState extends State<Youtube> {
                       ),
                     ),
                     Text(
-                      "Doraemon his storys",
+                      "Pokemon and his Trainer",
                       style: TextStyle(color: Colors.white),
                     ),
                   ],

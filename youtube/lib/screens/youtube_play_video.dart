@@ -67,7 +67,10 @@ class _YoutubePlayVideoState extends State<YoutubePlayVideo> {
                         ifliked == true
                             ? Icons.thumb_up
                             : Icons.thumb_up_alt_outlined,
-                        color: ifliked == true ? Colors.white : AppColor.primarycolor,
+                        color:
+                            ifliked == true
+                                ? Colors.white
+                                : AppColor.primarycolor,
                       ),
                       onPressed: () {
                         // handle like action

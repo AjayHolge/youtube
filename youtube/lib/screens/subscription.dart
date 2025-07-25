@@ -1,307 +1,628 @@
 import 'package:flutter/material.dart';
 
-class Subscription extends StatefulWidget {
-  const Subscription({super.key});
+class Subscriptions extends StatefulWidget {
+  const Subscriptions({super.key});
 
   @override
-  State<Subscription> createState() => _SubscriptionState();
+  State<Subscriptions> createState() => _SubscriptionState();
 }
 
-class _SubscriptionState extends State<Subscription> {
+class _SubscriptionState extends State<Subscriptions> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
-
       appBar: AppBar(
-        leading: SizedBox(
-          height: 70,
-          width: 70,
-          child: Image.network(
-            "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/2560px-YouTube_full-color_icon_%282017%29.svg.png",
-          ),
+        leading: Image.network(
+          "https://static.vecteezy.com/system/resources/previews/023/986/704/non_2x/youtube-logo-youtube-logo-transparent-youtube-icon-transparent-free-free-png.png",
         ),
         title: Text(
           "Youtube",
           style: TextStyle(color: Colors.white, fontWeight: FontWeight.w700),
         ),
+
         backgroundColor: Colors.black,
         actions: [
           Row(
             children: [
-              Icon(Icons.cast, size: 30, color: Colors.white),
-              SizedBox(width: 10),
-              Icon(Icons.notifications, size: 30, color: Colors.white),
-              SizedBox(width: 10),
-              Icon(Icons.search, size: 30, color: Colors.white),
+              Icon(
+                Icons.cast,
+                size: 30,
+                color: const Color.fromARGB(255, 245, 244, 244),
+              ),
+              SizedBox(width: 15),
+              Icon(
+                Icons.notifications,
+                size: 30,
+                color: const Color.fromARGB(255, 240, 240, 240),
+              ),
+              SizedBox(width: 15),
+              Icon(
+                Icons.search,
+                size: 30,
+                color: const Color.fromARGB(255, 243, 242, 242),
+              ),
+              SizedBox(width: 15),
             ],
           ),
         ],
       ),
-
       body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Column(
-            children: [
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: List.generate(
-                    8,
-                    (index) => Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 5.0),
-                      child: Container(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            SizedBox(height: 16),
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  Column(
+                    children: [
+                      Container(
                         height: 70,
                         width: 70,
                         decoration: BoxDecoration(
-                          color: Colors.grey,
-                          border: Border.all(color: Colors.grey, width: 3),
-                          shape: BoxShape.circle,
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(40.0),
                           image: DecorationImage(
                             image: NetworkImage(
-                              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTy9iS4rsz5DqyOJpjJSSo5m1sMmnIaT6EM_w&s",
+                              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUBydlWBUjSQ8W7GSNtcUVJ6NqeLM4KES2r-4Bb7xvSLkTuWwh8ooubplC-NnlMv_RXOs&usqp=CAU",
                             ),
-                            fit: BoxFit.cover,
                           ),
                         ),
                       ),
-                    ),
-                  ),
-                ),
-              ),
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 10.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      ElevatedButton(
-                        onPressed: () {},
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.white12,
-                          foregroundColor: Colors.white,
-                          shape: StadiumBorder(),
-                        ),
-                        child: Text("All"),
+                      Text(
+                        "Sidhu Moosewala",
+                        style: TextStyle(fontSize: 12, color: Colors.white),
                       ),
-                      SizedBox(width: 7),
-                      ElevatedButton(
-                        onPressed: () {},
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.white12,
-                          foregroundColor: Colors.white,
-                          shape: StadiumBorder(),
-                        ),
-                        child: Text("Today"),
-                      ),
-                      SizedBox(width: 7),
-                      ElevatedButton(
-                        onPressed: () {},
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.white12,
-                          foregroundColor: Colors.white,
-                          shape: StadiumBorder(),
-                        ),
-                        child: Text("Continue Watching"),
-                      ),
-                      SizedBox(width: 7),
-                      ElevatedButton(
-                        onPressed: () {},
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.white12,
-                          foregroundColor: Colors.white,
-                          shape: StadiumBorder(),
-                        ),
-                        child: Text("Unwatched"),
-                      ),
-                      SizedBox(width: 7),
-                      ElevatedButton(
-                        onPressed: () {},
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.white12,
-                          foregroundColor: Colors.white,
-                          shape: StadiumBorder(),
-                        ),
-                        child: Text("Live"),
-                      ),
-                      SizedBox(width: 7),
-                      ElevatedButton(
-                        onPressed: () {},
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.white12,
-                          foregroundColor: Colors.white,
-                          shape: StadiumBorder(),
-                        ),
-
-                        child: Text("Posts"),
-                      ),
-                      SizedBox(width: 7),
-                      ElevatedButton(
-                        onPressed: () {},
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.white12,
-                          foregroundColor: Colors.white,
-                          shape: StadiumBorder(),
-                        ),
-                        child: Text("Settings"),
-                      ),
-                      SizedBox(width: 7),
                     ],
                   ),
-                ),
+                  SizedBox(width: 10),
+                  Column(
+                    children: [
+                      Container(
+                        height: 70,
+                        width: 70,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(40.0),
+                          image: DecorationImage(
+                            image: NetworkImage(
+                              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRo1nrOC6PxgIug7V_xztmNtgqF4bbrr2cYxA&s",
+                            ),
+                          ),
+                        ),
+                      ),
+                      Text(
+                        "T-series",
+                        style: TextStyle(fontSize: 12, color: Colors.white),
+                      ),
+                    ],
+                  ),
+                  SizedBox(width: 10),
+
+                  Column(
+                    children: [
+                      Container(
+                        height: 70,
+                        width: 70,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(40.0),
+                          image: DecorationImage(
+                            image: NetworkImage(
+                              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVXs2a1wS3AXew2Rj6UWpX5flKA7-g4yzeaw&s",
+                            ),
+                          ),
+                        ),
+                      ),
+                      Text(
+                        "Marvel Enter...",
+                        style: TextStyle(fontSize: 12, color: Colors.white),
+                      ),
+                    ],
+                  ),
+                  SizedBox(width: 10),
+
+                  Column(
+                    children: [
+                      Container(
+                        height: 70,
+                        width: 70,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(40.0),
+                          image: DecorationImage(
+                            image: NetworkImage(
+                              "https://yt3.googleusercontent.com/3BxEzzKYxat60OP5i8Gw_afcwuxT6DWKU3ex7wPtPAWiP_K1kdQb7Ayl1YQfSjl0q47dwjp7=s900-c-k-c0x00ffffff-no-rj",
+                            ),
+                          ),
+                        ),
+                      ),
+                      Text(
+                        "Karan Aujla",
+                        style: TextStyle(fontSize: 12, color: Colors.white),
+                      ),
+                    ],
+                  ),
+                  SizedBox(width: 10),
+
+                  Column(
+                    children: [
+                      Container(
+                        height: 70,
+                        width: 70,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(40.0),
+                          image: DecorationImage(
+                            image: NetworkImage(
+                              "https://yt3.googleusercontent.com/ytc/AIdro_mSh0doIgogNhhpzLcRYEMRorZefkBUe_6LYOWnLgzSyFc=s900-c-k-c0x00ffffff-no-rj",
+                            ),
+                          ),
+                        ),
+                      ),
+                      Text(
+                        "Techno Gamerz",
+                        style: TextStyle(fontSize: 12, color: Colors.white),
+                      ),
+                    ],
+                  ),
+                  SizedBox(width: 10),
+
+                  Column(
+                    children: [
+                      Container(
+                        height: 70,
+                        width: 70,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(40.0),
+                          image: DecorationImage(
+                            image: NetworkImage(
+                              "https://yt3.googleusercontent.com/cxE8FStJktJ2oiuv1f-7OHMfJI7ZlMby4NgPDkfJTyV3sOsvdo5pmsAb8TAcJVNor6gNT2h_0w=s900-c-k-c0x00ffffff-no-rj",
+                            ),
+                          ),
+                        ),
+                      ),
+                      Text(
+                        "CarryMinati",
+                        style: TextStyle(fontSize: 12, color: Colors.white),
+                      ),
+                    ],
+                  ),
+                  SizedBox(width: 10),
+
+                  Column(
+                    children: [
+                      Container(
+                        height: 70,
+                        width: 70,
+                        decoration: BoxDecoration(
+                          color: Colors.black,
+                          borderRadius: BorderRadius.circular(40.0),
+                          image: DecorationImage(
+                            image: NetworkImage(
+                              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSROIRSGR1UVWcX0qZgn00UciVvtv-GQZTCWQ&s",
+                            ),
+                          ),
+                        ),
+                      ),
+                      Text(
+                        "Total Gaming",
+                        style: TextStyle(fontSize: 12, color: Colors.white),
+                      ),
+                    ],
+                  ),
+                  SizedBox(width: 10),
+                  Column(
+                    children: [
+                      Container(
+                        height: 70,
+                        width: 70,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(40.0),
+                          image: DecorationImage(
+                            image: NetworkImage(
+                              "https://yt3.googleusercontent.com/f4gXSHk69Ew8S3m7NmVD_e5D_6nx3yS2CdvQRGF2ZNXjJYsMC1CazVbeEbZyQ00X8tAg3QvwWzg=s900-c-k-c0x00ffffff-no-rj",
+                            ),
+                          ),
+                        ),
+                      ),
+                      Text(
+                        "Purav Jha",
+                        style: TextStyle(fontSize: 12, color: Colors.white),
+                      ),
+                    ],
+                  ),
+                ],
               ),
-
-              Container(
-                decoration: BoxDecoration(
-                  color: Colors.grey.shade300,
-                  image: DecorationImage(
-                    image: NetworkImage(
-                      "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/coffee-and-study-youtube-thumbnail-design-template-bc4975e87cb0c04c2af5f9abed675f2e_screen.jpg?ts=1589615831",
-                    ),
-                    fit: BoxFit.cover,
-                  ),
-                ),
-                height: 250,
-                width: double.infinity,
-
-                child: Padding(
-                  padding: const EdgeInsets.only(
-                    top: 220,
-                    left: 320,
-                    right: 10,
-                    bottom: 10,
-                  ),
-                  child: Container(
-                    height: 30,
-                    width: 60,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: const Color.fromARGB(255, 255, 17, 0),
-                    ),
+            ),
+            Column(
+              children: [
+                SizedBox(height: 18),
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 16.0),
                     child: Row(
                       children: [
-                        Icon(Icons.cast, color: Colors.white, size: 10),
-                        Text("Live", style: TextStyle(color: Colors.white)),
+                        ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.white,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 10,
+                              vertical: 10,
+                            ),
+                          ),
+                          onPressed: () {},
+                          child: const Text(
+                            "All",
+                            style: TextStyle(color: Colors.black),
+                          ),
+                        ),
+                        const SizedBox(width: 12),
+                        ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.grey.shade900,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 10,
+                              vertical: 10,
+                            ),
+                          ),
+                          onPressed: () {},
+                          child: const Text(
+                            "Today",
+                            style: TextStyle(color: Colors.white),
+                          ),
+                        ),
+                        const SizedBox(width: 12),
+                        ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.grey.shade900,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 10,
+                              vertical: 10,
+                            ),
+                          ),
+                          onPressed: () {},
+                          child: const Text(
+                            "Videos",
+                            style: TextStyle(color: Colors.white),
+                          ),
+                        ),
+                        const SizedBox(width: 12),
+                        ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.grey.shade900,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 10,
+                              vertical: 10,
+                            ),
+                          ),
+                          onPressed: () {},
+                          child: const Text(
+                            "Shorts",
+                            style: TextStyle(color: Colors.white),
+                          ),
+                        ),
+                        const SizedBox(width: 12),
+                        ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.grey.shade900,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 10,
+                              vertical: 10,
+                            ),
+                          ),
+                          onPressed: () {},
+                          child: const Text(
+                            "Live",
+                            style: TextStyle(color: Colors.white),
+                          ),
+                        ),
+                        const SizedBox(width: 12),
+                        ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.grey.shade900,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 10,
+                              vertical: 10,
+                            ),
+                          ),
+                          onPressed: () {},
+                          child: const Text(
+                            "Podcasts",
+                            style: TextStyle(color: Colors.white),
+                          ),
+                        ),
+                        const SizedBox(width: 12),
+                        ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.grey.shade900,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 10,
+                              vertical: 10,
+                            ),
+                          ),
+                          onPressed: () {},
+                          child: const Text(
+                            "Posts",
+                            style: TextStyle(color: Colors.white),
+                          ),
+                        ),
+                        const SizedBox(width: 12),
+                        ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.grey.shade900,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 10,
+                              vertical: 10,
+                            ),
+                          ),
+                          onPressed: () {},
+                          child: const Text(
+                            "Continue watching",
+                            style: TextStyle(color: Colors.white),
+                          ),
+                        ),
+                        const SizedBox(width: 12),
+                        ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.grey.shade900,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 10,
+                              vertical: 10,
+                            ),
+                          ),
+                          onPressed: () {},
+                          child: const Text(
+                            "Unwatched",
+                            style: TextStyle(color: Colors.white),
+                          ),
+                        ),
+                        const SizedBox(width: 12),
+                        ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.black,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 10,
+                              vertical: 10,
+                            ),
+                          ),
+                          onPressed: () {},
+                          child: const Text(
+                            "Settings",
+                            style: TextStyle(color: Colors.blue),
+                          ),
+                        ),
                       ],
                     ),
                   ),
                 ),
-              ),
-              SizedBox(height: 20),
-              Row(
-                children: [
-                  SizedBox(width: 20),
-                  Container(
-                    height: 50,
-                    width: 50,
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      image: DecorationImage(
-                        image: NetworkImage(
-                          "https://cdn.dribbble.com/userupload/29466076/file/original-ba33901121ed678c59f90d9a6fca0438.gif",
-                        ),
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                  ),
-                  SizedBox(width: 20),
-                  Column(
-                    //mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "Doraemon and its Friends",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 20,
-                          fontWeight: FontWeight.w400,
-                        ),
-                      ),
-                      Text(
-                        "Doraemon his storys",
-                        style: TextStyle(color: Colors.white),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
+              ],
+            ),
+            const SizedBox(height: 10),
+            // Text(
+            //   "Most Relevant",
+            //   style: TextStyle(fontSize: 20, color: Colors.white,fontWeight: FontWeight.w700),
+            // ),
+            SizedBox(height: 15),
+            Container(
+              decoration: BoxDecoration(color: Colors.grey.shade300),
+              height: 250,
+              width: double.infinity,
 
-              Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  SizedBox(
-                    height: 70,
-                    //width: 80,
-                    child: Image.network(
-                      "https://img.pikbest.com/origin/09/21/29/70epIkbEsTFJf.png!sw800",
-                    ),
-                  ),
-                  Text(
-                    "Shorts ",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 25,
-                      fontWeight: FontWeight.w900,
-                    ),
-                  ),
-                  Padding(padding: const EdgeInsets.only(left: 180)),
-                  Icon(Icons.more_vert, color: Colors.white),
-                ],
+              child: Image.network(
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUBydlWBUjSQ8W7GSNtcUVJ6NqeLM4KES2r-4Bb7xvSLkTuWwh8ooubplC-NnlMv_RXOs&usqp=CAU",
+                fit: BoxFit.cover,
               ),
+            ),
 
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
+            //testing
+            SizedBox(height: 20),
+            Row(
+              children: [
+                SizedBox(width: 20),
+                Container(
+                  height: 50,
+                  width: 50,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    image: DecorationImage(
+                      image: NetworkImage(
+                        "https://yt3.googleusercontent.com/ytc/AIdro_kiQJ0Hhp0O-tdaY1dy81-gSNujjccUlWstnpFr686ZlMk=s900-c-k-c0x00ffffff-no-rj",
+                      ),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+                SizedBox(width: 20),
+                Column(
+                  //mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Container(
-                      height: 300,
-                      width: 185,
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                          image: NetworkImage(
-                            "https://w0.peakpx.com/wallpaper/660/259/HD-wallpaper-tom-and-jerry-cartoons-thumbnail.jpg",
-                          ),
-                          fit: BoxFit.fill,
-                        ),
-                        borderRadius: BorderRadius.circular(15),
+                    Text(
+                      "TAKE NOTES( Official Audio) sidhu Moose",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 15,
+                        fontWeight: FontWeight.w400,
                       ),
                     ),
-                    SizedBox(width: 10),
-                    Container(
-                      height: 300,
-                      width: 185,
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                          image: NetworkImage(
-                            "https://i.pinimg.com/474x/9f/a1/ba/9fa1ba3e7dd1298712e3958ac8c3a671.jpg",
-                          ),
-                          fit: BoxFit.fill,
-                        ),
-                        borderRadius: BorderRadius.circular(15),
-                      ),
-                    ),
-                    SizedBox(width: 10),
-                    Container(
-                      height: 300,
-                      width: 185,
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                          image: NetworkImage(
-                            "https://images.justwatch.com/poster/323283688/s718/ninja-hattori.jpg",
-                          ),
-                          fit: BoxFit.fill,
-                        ),
-                        borderRadius: BorderRadius.circular(15),
-                      ),
+                    Text(
+                      " Sidhu Moose Wala",
+                      style: TextStyle(color: Colors.white),
                     ),
                   ],
                 ),
-              ),
-            ],
-          ),
+              ],
+            ),
+            SizedBox(height: 10),
+            Row(
+              children: [
+                Container(
+                  height: 65,
+                  width: 65,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(200),
+                    image: DecorationImage(
+                      image: NetworkImage(
+                        "https://img.pikbest.com/origin/09/21/29/70epIkbEsTFJf.png!sw800",
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(width: 10),
+                Text(
+                  "Shorts",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 25,
+                    fontWeight: FontWeight.w900,
+                  ),
+                ),
+                Padding(padding: const EdgeInsets.only(left: 210)),
+                Icon(
+                  Icons.more_vert,
+                  color: const Color.fromARGB(255, 251, 250, 250),
+                ),
+              ],
+            ),
+            SizedBox(height: 10),
+            Column(
+              children: [
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      Container(
+                        height: 300,
+                        width: 185,
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                            image: NetworkImage(
+                              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX6Gk9YgomvxAm1kTEGzLy_ZDZ-prMl0F34Q&s.jpg",
+                            ),
+                            fit: BoxFit.fill,
+                          ),
+                          borderRadius: BorderRadius.circular(15),
+                        ),
+                      ),
+                      SizedBox(width: 10),
+                      Container(
+                        height: 300,
+                        width: 185,
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                            image: NetworkImage(
+                              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiwamD04iUG--0R8gTC8tcCfCXHlCHbtbNVQ&s4",
+                            ),
+                            fit: BoxFit.fill,
+                          ),
+                          borderRadius: BorderRadius.circular(15),
+                        ),
+                      ),
+                      SizedBox(width: 10),
+                      Container(
+                        height: 300,
+                        width: 185,
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                            image: NetworkImage(
+                              "https://images.justwatch.com/poster/323283688/s718/ninja-hattori.jpg",
+                            ),
+                            fit: BoxFit.fill,
+                          ),
+                          borderRadius: BorderRadius.circular(15),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(height: 15),
+                Container(
+                  decoration: BoxDecoration(color: Colors.grey.shade300),
+                  height: 250,
+                  width: double.infinity,
+
+                  child: Image.network(
+                    "https://i.ytimg.com/vi/yXtcXyaEx_E/maxresdefault.jpg",
+                    fit: BoxFit.cover,
+                  ),
+                ),
+                SizedBox(height: 20),
+                Row(
+                  children: [
+                    SizedBox(width: 20),
+                    Container(
+                      height: 50,
+                      width: 50,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        image: DecorationImage(
+                          image: NetworkImage(
+                            "https://yt3.googleusercontent.com/ytc/AIdro_mSh0doIgogNhhpzLcRYEMRorZefkBUe_6LYOWnLgzSyFc=s900-c-k-c0x00ffffff-no-rj",
+                          ),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
+                    SizedBox(width: 20),
+                    Column(
+                      //mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "A NEW ADVENTURE BEGINS",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                            fontWeight: FontWeight.w400,
+                          ),
+                        ),
+                        Text(
+                          "Techno Gamerz",
+                          style: TextStyle(color: Colors.white),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ],
         ),
       ),
     );

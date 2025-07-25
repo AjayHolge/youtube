@@ -4,7 +4,6 @@ import 'package:youtube/screens/shorts.dart';
 import 'package:youtube/screens/subscription.dart';
 import 'package:youtube/screens/youtube.dart';
 
-
 class Tabs extends StatefulWidget {
   const Tabs({super.key});
 
@@ -13,27 +12,27 @@ class Tabs extends StatefulWidget {
 }
 
 class _TabsState extends State<Tabs> {
-
-  int _selectedIndex  = 0;
-   final List<Widget> _Screens =[
+  int _selectedIndex = 0;
+  final List<Widget> _Screens = [
     Youtube(),
     Shorts(),
-    Center(child: Icon(Icons.add_circle_outline, size: 80, color: Colors.black)),
-    Subscription(),
+    Center(
+      child: Icon(Icons.add_circle_outline, size: 80, color: Colors.black),
+    ),
+    Subscriptions(),
     Library(),
-    ];
+  ];
 
-  void _onItemTapped (int index){
+  void _onItemTapped(int index) {
     setState(() {
-        _selectedIndex = index;
+      _selectedIndex = index;
     });
-  
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
-      body:   _Screens[_selectedIndex],
+      body: _Screens[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Colors.black,
         selectedIconTheme: IconThemeData(color: Colors.white),
@@ -60,7 +59,6 @@ class _TabsState extends State<Tabs> {
             icon: Icon(Icons.video_library),
             label: 'Library',
           ),
-          
         ],
       ),
     );

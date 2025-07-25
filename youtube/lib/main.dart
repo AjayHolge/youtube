@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:youtube/screens/create_new_account_screen.dart';
-import 'package:youtube/screens/dummy_screen.dart';
 import 'package:youtube/screens/forgot_password_screen.dart';
 import 'package:youtube/screens/library.dart';
 import 'package:youtube/screens/login_screen.dart';
@@ -24,14 +24,16 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       initialRoute: '/',
       routes: {
-        '/': (context) => DummyScreen(),
-        '/loginscreen': (context) => LoginScreen(),
-        '/shorts': (context) => Shorts(),
+        '/': (context) => Tabs(),
         '/tabs': (context) => Tabs(),
+
+        '/LoginScreen': (context) => LoginScreen(),
+        '/shorts': (context) => Shorts(),
+
         '/forgotPassword': (context) => ForgotPasswordScreen(),
         '/library_screen': (context) => Library(),
         '/Notification_screen': (context) => Notifications(),
-        '/Subscription': (context) => Subscription(),
+        '/Subscription': (context) => Subscriptions(),
         '/creat_new_account': (context) => CreateNewAccountScreen(),
         '/youtube_screen': (context) => Youtube(),
         '/YoutubePlayVideo': (context) => YoutubePlayVideo(),

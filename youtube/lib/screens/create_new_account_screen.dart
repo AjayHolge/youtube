@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:youtube/color/app_color.dart';
-import 'package:youtube/routes/app_routes.dart';
-import 'package:youtube/screens/login_screen.dart';
 
 class CreateNewAccountScreen extends StatefulWidget {
   const CreateNewAccountScreen({super.key});
@@ -149,7 +147,7 @@ class _CreateNewAccountScreenState extends State<CreateNewAccountScreen> {
                             : null,
               ),
               const SizedBox(height: 32),
-              SizedBox(
+              Container(
                 width: double.infinity,
                 height: 48,
                 child: ElevatedButton(
@@ -173,13 +171,24 @@ class _CreateNewAccountScreenState extends State<CreateNewAccountScreen> {
               ),
               const SizedBox(height: 16),
 
+              // TextButton(
+              //   onPressed: () {
+              //   Navigator.pushNamed(context, AppRoutes.login);
+              //   },
+              //   child: Text(
+              //     "back to login",
+              //     style: TextStyle(color: AppColor.primarycolor),
+              //   ),
+              // ),
               TextButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, AppRoutes.login);
-                },
-                child: Text(
-                  "back to login",
-                  style: TextStyle(color: AppColor.primarycolor),
+                onPressed: () => Navigator.of(context).pop(),
+                child: const Text(
+                  'Back to Login',
+                  style: TextStyle(
+                    color: AppColor.primarycolor,
+                    fontSize: 16,
+                    fontFamily: 'Roboto',
+                  ),
                 ),
               ),
             ],

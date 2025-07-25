@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:youtube/color/app_color.dart';
-import 'package:youtube/controller/login_controller.dart';
-import 'package:youtube/routes/app_routes.dart';
+import 'package:youtube/screens/create_new_account_screen.dart';
+import 'package:youtube/screens/forgot_password_screen.dart';
+
+///import 'package:youtube/screens/forget.dart';
+import 'package:youtube/screens/tabs.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -14,12 +15,15 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   bool magic = true;
   final _formKey = GlobalKey<FormState>();
-
-  final loginController = Get.put(LoginController());
+  final TextEditingController emailCtrl = TextEditingController();
+  final TextEditingController passwordCtrl = TextEditingController();
 
   void _login() {
     if (_formKey.currentState!.validate()) {
-      loginController.loginUser();
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => Tabs()),
+      );
     }
   }
 
@@ -37,7 +41,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   // YouTube Logo
-                  Image.asset('assets/images/youtube.png', height: 80),
+                  Image.asset('assets/images/youtube.jpg', height: 80),
                   const SizedBox(height: 32),
                   const Text(
                     "Sign in",
@@ -60,7 +64,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           Colors.blue, // 👈 change this to your desired color
                       fontSize: 16,
                     ),
-                    controller: loginController.emailCtrl,
+                    controller: emailCtrl,
                     decoration: InputDecoration(
                       labelText: "Email or phone",
                       border: OutlineInputBorder(
@@ -81,7 +85,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   const SizedBox(height: 20),
                   // Password Field
                   TextFormField(
-                    controller: loginController.passwordCtrl,
+                    controller: passwordCtrl,
                     obscureText: magic,
 
                     decoration: InputDecoration(
@@ -93,7 +97,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         },
                         icon: Icon(
                           magic ? Icons.visibility_off : Icons.remove_red_eye,
-                          color: magic ? Colors.blue : AppColor.primarycolor,
+                          color: magic ? Colors.blue : Colors.red,
                         ),
                       ),
                       labelText: "Password",
@@ -106,40 +110,40 @@ class _LoginScreenState extends State<LoginScreen> {
                       if (value == null || value.trim().isEmpty) {
                         return "Password is required and can not be null";
                       }
-                      if (value.length < 6) {
-                        return "Password must be at least 6 characters";
+                      if (value.length < 10) {
+                        return "Password must be at least 10 characters";
                       }
                       return null;
                     },
                   ),
                   const SizedBox(height: 12),
-
                   Align(
-                    alignment: Alignment.bottomRight,
+                    alignment: Alignment.centerRight,
                     child: TextButton(
                       onPressed: () {},
                       child: GestureDetector(
                         onTap: () {
-                          Navigator.pushNamed(
-                            (context),
-                            AppRoutes.forgotpassword,
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => ForgotPasswordScreen(),
+                            ),
                           );
                         },
                         child: const Text(
-                          "Forgot password?",
+                          "Forget password?",
                           style: TextStyle(color: Colors.blue),
                         ),
                       ),
                     ),
                   ),
-
                   const SizedBox(height: 24),
                   SizedBox(
                     width: double.infinity,
                     child: ElevatedButton(
                       onPressed: _login,
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: AppColor.primarycolor,
+                        backgroundColor: Colors.red[700],
                         padding: const EdgeInsets.symmetric(vertical: 14),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(8),
@@ -156,21 +160,31 @@ class _LoginScreenState extends State<LoginScreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       const Text("Don't have an account?"),
+
+                      // TextButton(
+                      //   onPressed: () {},
+                      //   child: const Text(
+                      //     "Create account",
+                      //     style: TextStyle(color: Colors.blue),
+                      //   ),
+                      // ),
                       TextButton(
                         onPressed: () {},
                         child: GestureDetector(
                           onTap: () {
-                            Navigator.pushReplacementNamed(
+                            Navigator.push(
                               context,
-                              AppRoutes.creatNewAccountScreen,
-                              // MaterialPageRoute(
-                              //   builder: (context) => CreateNewAccountScreen(),
-                              // ),
+                              MaterialPageRoute(
+                                builder: (context) => CreateNewAccountScreen(),
+                              ),
                             );
                           },
                           child: const Text(
-                            "Create account",
-                            style: TextStyle(color: Colors.blue),
+                            'Create Account',
+                            style: TextStyle(
+                              fontSize: 14,
+                              color: Color.fromARGB(255, 19, 19, 19),
+                            ),
                           ),
                         ),
                       ),
