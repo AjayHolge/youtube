@@ -1,14 +1,21 @@
 import 'package:get/get.dart';
 
 class YoutubePlayController extends GetxController {
-  var ifliked = false.obs;
+  var ifLiked = false.obs;
+  var ifDisliked = false.obs;
+  var isSubscribed = false.obs;
 
   void like() {
-    // handle like action
-    if (ifliked == true) {
-      ifliked.value = false;
-    } else {
-      ifliked.value = true;
-    }
+    ifLiked.value = !ifLiked.value;
+    ifDisliked.value = false;
+  }
+
+  void dislike() {
+    ifDisliked.value = !ifDisliked.value;
+    ifLiked.value = false;
+  }
+
+  void toggleSubscribe() {
+    isSubscribed.value = !isSubscribed.value;
   }
 }
